@@ -1,0 +1,20 @@
+[project]
+name = "ticket-summary"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "abram", email = "abramhany9@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "outlines>=1.3.3",
+    "transformers>=5.16.1",
+]
+
+[project.scripts]
+ticket-summary = "ticket_summary:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
