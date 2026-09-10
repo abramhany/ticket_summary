@@ -1,6 +1,14 @@
 from schema.ticket import Ticket
 from prompt.summarizer import summary_prompt
 import json
+import pandas as pd
+from schema.table import Table
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+table_loc = os.environ['DATA_FILE_NAME']
+table  = Table(table_loc)
 
 class TicketEvaluator:
 
@@ -43,31 +51,78 @@ class TicketEvaluator:
             dic_output = json.loads(output)
 
         except ValueError:
-                    response = {
-                                    'ticket_id': row['ticket_id'].values ,
-                                    'success':False,
-                                    'message': row['message'] ,
-                                    'category' : row['category'] ,
-                                    'sentiment': row['sentiment'] ,
-                                    'urgency': row['urgency'] ,
-                                }
+                    predicted = {
+                                        'success':False,
+                                         'pred_category' : False ,
+                                         'pred_sentiment': False ,
+                                         'pred_urgency': False ,
+                                        'pred_summary' : False
+                                    }
                     return response
         
         predicted = {
-                    'ticket_id': row['ticket_id'].values ,
                     'success':True,
-                    'message': row['message'] ,
-                     'category' : dic_output['category'] ,
-                     'sentiment': dic_output['sentiment'] ,
-                     'urgency': dic_output['urgency'] ,
-                    'summary' : dic_output['summary']
+                     'pred_category' : dic_output['category'] ,
+                     'pred_sentiment': dic_output['sentiment'] ,
+                     'pred_urgency': dic_output['urgency'] ,
+                    'pred_summary' : dic_output['summary']
                 }
-        for compare in compares :
-            if predicted[compare] == row[compare]:
-                 metric[compare] = True
-            else:
-                 metric[compare] = False
+       
+        return  predicted
 
-        return metric , predicted
+    def evalutaion_dataframe(self,**karg):
 
+        """ returns a dataframe containing id,
+        message, actual:[category,sentiment,urgency],
+        predicted:[category,sentiment,urgency], summary"""
         
+        results = []
+    
+        length = table.return_length()
+        for i in range(length):
+            
+            row = table.return_ticket(i)
+            print(row)
+            predicted =self.evalute_ticket(row,**karg)
+            actual = {
+                                        'ticket_id': row['ticket_id'] ,
+                                        'message': row['message'] ,
+                                        'category' : row['category'] ,
+                                        'sentiment': row['sentiment'] ,
+                                        'urgency': row['urgency'] ,
+                                    }
+            merged_dict = actual | predicted
+            results.append(merged_dict)
+
+        df = pd.DataFrame(results)
+        return df
+    
+                        
+    def accuarcy_precentage(self,col):
+        value=col.sum()
+        precentage = (value / col.shape[0])*100
+
+        return precentage
+                           
+    def accuracy_metric(self,df):
+        """"takes the the dataframe and compares the predicted answer with the right answer and return the accuracy percentage"""
+        df['category_accuracy'] =df['category'] == df['pred_category']
+        df['sentiment_accuracy'] = df['sentiment'] == df['pred_sentiment']
+        df['urgency_accuracy'] = df['urgency'] == df['pred_urgency']
+
+        metric= {
+              'category_accuracy': self.accuarcy_precentage(df['category_accuracy']),
+              'sentiment_accuracy':self.accuarcy_precentage(df['sentiment_accuracy']),
+              'urgency_accuracy':self.accuarcy_precentage(df['urgency_accuracy']),
+        }
+
+       
+        return metric
+            
+    
+            
+
+
+            
+
+

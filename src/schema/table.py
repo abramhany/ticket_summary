@@ -17,9 +17,8 @@ class Table:
 
         if number > self.df['message'].value_counts().sum():
             raise "Number is wrong" 
-        return self.df['message'].sample(n=number,random_state=8)
-
-    def return_row(self,number:int):
-        if number > self.df['message'].value_counts().sum():
-                    raise "Number is wrong" 
         return self.df.sample(n=number,random_state=8)
+
+    
+    def return_length(self):
+        return self.df.shape[0]
