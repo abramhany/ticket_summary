@@ -7,32 +7,19 @@ class Table:
         self.file_loc = file_loc
         self.df = pd.read_csv(self.file_loc)
 
-    def read_data(self):
-       
-       return pd.read_csv(self.file_loc)
-
-    def category_cat(self):
-
-        df = self.read_data(self.file_loc)
-
-        return df['category'].unique().to_list()
-
-    def sentiment_cat(self):
-
-        df = self.read_data(self.file_loc)
-
-        return df['sentiment'].unique().to_list()
-
-    def urgency(self):
-        
-        df = self.read_data(self.file_loc)
-        
-        return df['urgency'].unique().to_list()
-
     def return_ticket(self,number:int):
 
-    
+        if number > self.df.shape[0]:
+            raise "number is wrong"
+        return self.df.loc[number]
+
+    def return_samples(self,number:int):
+
         if number > self.df['message'].value_counts().sum():
-            return "number is wrong"
-        return self.df.iloc[number,1]
-    
+            raise "Number is wrong" 
+        return self.df['message'].sample(n=number,random_state=8)
+
+    def return_row(self,number:int):
+        if number > self.df['message'].value_counts().sum():
+                    raise "Number is wrong" 
+        return self.df.sample(n=number,random_state=8)

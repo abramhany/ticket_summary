@@ -1,7 +1,7 @@
 from .base import base_prompt
 
 
-def summary_prompt(user_input):
+def summary_prompt(user_input:str):
 
     return base_prompt(
         user_input=user_input,

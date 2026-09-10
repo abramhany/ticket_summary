@@ -6,13 +6,17 @@ def base_prompt(role:str,task:str,user_input:str,constraints:list[str]|None =Non
         constraints_text = '\n'.join(f"- {item}" for item in constraints)
       
    prompt = f"""
-   Role: {role}
+   Role: 
+   {role}
 
-   task: {task}
+   task: 
+   {task}
 
-   Constraints: {constraints_text}
+   Constraints: 
+   {constraints_text}
 
-    input : {user_input}
+    input : 
+    {user_input}
 """.strip()
 
    return prompt
