@@ -106,7 +106,7 @@ class TicketEvaluator:
             return df
         
         df = pd.DataFrame(results)
-        df.to_csv(output_loc,mode='a')
+        df.to_csv(output_loc,mode='a',header=False)
 
         return df
     

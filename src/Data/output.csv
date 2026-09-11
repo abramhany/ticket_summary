@@ -20,3 +20,44 @@
 7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Order delivered early and in good condition.
 8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
 9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
+,ticket_id,message,category,sentiment,urgency,success,pred_category,pred_sentiment,pred_urgency,pred_summary
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen is broken and needs urgent assistance.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Forgot password needs password reset
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's assistance.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Positive feedback about early delivery quality.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How can I upgrade my subscription plan?
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent assistance needed
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Forgot password and need to reset
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team assistance.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer received order early and is satisfied.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen damaged with high urgency.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Customer forgot their password and requests for password reset.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Package arrived two days late.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,I was charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer appreciates support team's help.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,low,Payment failed despite debit
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Positive feedback on early delivery with no issues
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes on file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Request for upgrade of subscription plan
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent assistance needed
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Forgot password and need to reset
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's assistance.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer received order early and is satisfied.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
