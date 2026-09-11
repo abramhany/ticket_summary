@@ -5,9 +5,13 @@ import pandas as pd
 from schema.table import Table
 import os
 from dotenv import load_dotenv
+import time
+
 load_dotenv()
 
 table_loc = os.environ['DATA_FILE_NAME']
+output_loc = os.environ['OUTPUT_FILE_NAME']
+metric_loc = os.environ['METRIC_FILE_NAME']
 table  = Table(table_loc)
 
 class TicketEvaluator:
@@ -28,8 +32,7 @@ class TicketEvaluator:
 
     def evalute_ticket(self,row,**karg):
 
-        compares = ['category','sentiment','urgency']
-        metric = {}
+       
         try:
             ticket = summary_prompt(row['message'])
         except ValueError:
@@ -58,7 +61,7 @@ class TicketEvaluator:
                                          'pred_urgency': False ,
                                         'pred_summary' : False
                                     }
-                    return response
+                    return predicted
         
         predicted = {
                     'success':True,
@@ -82,8 +85,10 @@ class TicketEvaluator:
         for i in range(length):
             
             row = table.return_ticket(i)
-            print(row)
+            
             predicted =self.evalute_ticket(row,**karg)
+            print(predicted)
+
             actual = {
                                         'ticket_id': row['ticket_id'] ,
                                         'message': row['message'] ,
@@ -94,7 +99,15 @@ class TicketEvaluator:
             merged_dict = actual | predicted
             results.append(merged_dict)
 
+        if not os.path.exists(output_loc):
+
+            df = pd.DataFrame(results)
+            df.to_csv(output_loc   )
+            return df
+        
         df = pd.DataFrame(results)
+        df.to_csv(output_loc,mode='a')
+
         return df
     
                         
@@ -106,17 +119,28 @@ class TicketEvaluator:
                            
     def accuracy_metric(self,df):
         """"takes the the dataframe and compares the predicted answer with the right answer and return the accuracy percentage"""
+        df =df.iloc[-10:]
         df['category_accuracy'] =df['category'] == df['pred_category']
         df['sentiment_accuracy'] = df['sentiment'] == df['pred_sentiment']
         df['urgency_accuracy'] = df['urgency'] == df['pred_urgency']
-
+        current_struct = time.localtime()
         metric= {
               'category_accuracy': self.accuarcy_precentage(df['category_accuracy']),
               'sentiment_accuracy':self.accuarcy_precentage(df['sentiment_accuracy']),
               'urgency_accuracy':self.accuarcy_precentage(df['urgency_accuracy']),
+               'Time': time.strftime("%m-%d %H:%M", current_struct)
         }
 
-       
+        if not os.path.exists(metric_loc):
+
+                df = pd.DataFrame([metric])
+                df.to_csv(metric_loc)
+
+                return df    
+        
+        df = pd.DataFrame([metric])
+        df.to_csv(metric_loc,mode='a',header=False)    
+        
         return metric
             
     

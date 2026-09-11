@@ -1,9 +1,12 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
 
 def get_model(name):
     
+    
     model = AutoModelForCausalLM.from_pretrained(name, torch_dtype="auto",
-    device_map="auto",use_cache= True)
+    device_map="auto",use_cache=True)
     tokenizer = AutoTokenizer.from_pretrained(name)
     print("model downloaded")
     return model , tokenizer
