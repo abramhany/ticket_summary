@@ -6,6 +6,7 @@ from schema.table import Table
 import os
 from dotenv import load_dotenv
 import time
+from outlines.inputs import Chat
 
 load_dotenv()
 
@@ -34,7 +35,11 @@ class TicketEvaluator:
 
        
         try:
-            ticket = summary_prompt(row['message'])
+            ticket = summary_prompt()
+            prompt = Chat([
+                        {"role": "system", "content": ticket},
+                        {"role": "user", "content": row['message']},
+                            ])
         except ValueError:
             response = {
                             'ticket_id': row['ticket_id'] ,
@@ -48,7 +53,7 @@ class TicketEvaluator:
         
         try:
             
-            result = self.generator(ticket,**karg)
+            result = self.generator(prompt,**karg)
             output = Ticket.model_validate_json(result)
             output = output.model_dump_json()
             dic_output = json.loads(output)
@@ -117,19 +122,28 @@ class TicketEvaluator:
 
         return precentage
                            
-    def accuracy_metric(self,df):
+    def accuracy_metric(self,df,number_of_rows=None):
         """"takes the the dataframe and compares the predicted answer with the right answer and return the accuracy percentage"""
-        df =df.iloc[-10:]
+
+        if number_of_rows is None :
+            df_len = df.shape[0]
+            df =df.iloc[-abs(df_len):]
+        else :
+            df =df.iloc[number_of_rows:]
+
         df['category_accuracy'] =df['category'] == df['pred_category']
         df['sentiment_accuracy'] = df['sentiment'] == df['pred_sentiment']
         df['urgency_accuracy'] = df['urgency'] == df['pred_urgency']
+
         current_struct = time.localtime()
+        
         metric= {
               'category_accuracy': self.accuarcy_precentage(df['category_accuracy']),
               'sentiment_accuracy':self.accuarcy_precentage(df['sentiment_accuracy']),
               'urgency_accuracy':self.accuarcy_precentage(df['urgency_accuracy']),
                'Time': time.strftime("%m-%d %H:%M", current_struct)
         }
+        
 
         if not os.path.exists(metric_loc):
 
@@ -145,7 +159,6 @@ class TicketEvaluator:
             
     
             
-
 
             
 

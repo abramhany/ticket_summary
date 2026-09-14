@@ -9,3 +9,13 @@ ticket_id,message,category,sentiment,urgency
 8,"I received my order early and everything looks great.",delivery,positive,low
 9,"The mobile app freezes when I upload a file.",technical,negative,high
 10,"How can I upgrade my subscription plan?",subscription,neutral,low
+11,The website is throwing a 500 error when I try to checkout.,technical,negative,high
+12,How do I upgrade my current plan to premium?,subscription,neutral,low
+13,Thank you for fixing my account issues so quickly!,account,positive,low
+14,I haven't received any tracking updates for a week.,delivery,negative,high
+15,Where can I find the invoice for last month?,billing,neutral,low
+16,My software keeps crashing upon startup.,technical,negative,high
+17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium
+18,The promo code I received isn't working.,billing,negative,medium
+19,Can I pause my membership for a month?,subscription,neutral,low
+20,I'm locked out of my account and need it for a meeting now!,account,negative,high

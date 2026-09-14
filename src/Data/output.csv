@@ -1,63 +1,161 @@
 ,ticket_id,message,category,sentiment,urgency,success,pred_category,pred_sentiment,pred_urgency,pred_summary
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent help needed
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Forgot password and need to reset.
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Package arrived two days late.
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen repair needed urgently
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,medium,User needs to reset their forgotten password
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived late
 3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,low,Customer wants to cancel their subscription
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer appreciates support team's assistance
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed but funds were deducted
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Order arrived early and product quality is good
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,neutral,medium,Mobile app freezes on file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,account,neutral,low,Requesting to upgrade subscription plan
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,neutral,medium,Website experiencing 500 error during checkout
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,account,neutral,medium,Request for plan upgrade to premium
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,high,Account issue resolved promptly
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,neutral,high,Missing delivery updates for a week
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Request for invoice information
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,neutral,low,Software crashes on startup
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,account,neutral,low,Request to change shipping address
+17,18,The promo code I received isn't working.,billing,negative,medium,True,billing,neutral,low,Promo code not working
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,subscription,neutral,low,Customer requests to pause membership for a month
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,Account lockout during urgent meeting
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen issue with high urgency
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,medium,User needs to reset their forgotten password
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived late
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,low,Customer wants to cancel their subscription
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer appreciates support team's assistance
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed but funds were deducted
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Order arrived early and items are good
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,neutral,low,Mobile app freezes during file upload
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,billing,neutral,low,Request to upgrade subscription plan
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,Website checkout fails with 500 error
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,billing,neutral,medium,Request for plan upgrade to premium
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,high,Account issues resolved promptly
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,neutral,high,No tracking updates for a week
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Requesting information about last month's invoice
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,neutral,low,Software crashes on startup
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,account,neutral,low,Request to change shipping address
+17,18,The promo code I received isn't working.,billing,negative,medium,True,billing,neutral,low,Promo code not working
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,account,neutral,medium,Customer requests to pause their membership for a month
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,Account lockout during urgent meeting
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen repair request for urgent assistance
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,medium,User forgot password and requests password reset.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,high,Package delivery delayed
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order.
 4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
 5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's help.
 6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Positive feedback on early delivery and product quality.
-8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,subscription,positive,low,Customer received order early and is satisfied.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes upon file upload.
 9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan.
-,ticket_id,message,category,sentiment,urgency,success,pred_category,pred_sentiment,pred_urgency,pred_summary
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent assistance needed
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,User forgot password and needs to reset.
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package delivered late
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,Website throws 500 error during checkout attempt.
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,account,neutral,low,Customer wants to upgrade their account plan from current to premium.
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,subscription,positive,low,Customer appreciates quick resolution of account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,negative,high,Customer seeking delivery tracking updates after a week delay
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Requesting invoice for last month
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,negative,high,Software crashes upon startup.
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,account,neutral,low,Request to change shipping address for an existing order.
+17,18,The promo code I received isn't working.,billing,negative,medium,True,billing,negative,high,Promo code not working
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,account,neutral,low,Request to pause membership for a month
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,Customer locked out of account urgently needed for meeting.
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen issue with high urgency
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,medium,Password reset request
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,high,Package arrived late
 3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order.
-4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
-5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's assistance.
-6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Order delivered early and in good condition.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,low,Customer wants to cancel their subscription
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer appreciates support team's assistance.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed but funds were deducted.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Order arrived early and items are good
 8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
-9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
-,ticket_id,message,category,sentiment,urgency,success,pred_category,pred_sentiment,pred_urgency,pred_summary
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen is broken and needs urgent assistance.
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Forgot password needs password reset
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
-3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
-4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
-5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's assistance.
-6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Positive feedback about early delivery quality.
-8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
-9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How can I upgrade my subscription plan?
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent assistance needed
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Forgot password and need to reset
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
-3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order
-4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
-5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team assistance.
-6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer received order early and is satisfied.
-8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
-9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen damaged with high urgency.
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Customer forgot their password and requests for password reset.
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Package arrived two days late.
-3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,I was charged twice for the same order.
-4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription
-5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer appreciates support team's help.
-6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,low,Payment failed despite debit
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Positive feedback on early delivery with no issues
-8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes on file upload
-9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Request for upgrade of subscription plan
-0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Laptop screen broken urgent assistance needed
-1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,negative,high,Forgot password and need to reset
-2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Package arrived two days late.
-3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,high,Customer charged twice for the same order.
-4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,negative,low,Customer wants to cancel their subscription.
-5,6,"Your support team was very helpful, thank you!",account,positive,low,True,subscription,positive,low,Customer expresses gratitude for support team's assistance.
-6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,high,Payment failed despite deduction from account.
-7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer received order early and is satisfied.
-8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,high,Mobile app freezes during file upload
-9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,How to upgrade subscription plan
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,account,neutral,low,Customer requests information on upgrading their subscription plan.
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,Website experiencing 500 error during checkout attempt
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,account,neutral,low,Requesting information on upgrading account plan from current to premium
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,high,Customer appreciates quick resolution of account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,neutral,high,Customer reports no delivery updates for a week.
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Customer seeks information about locating an invoice from previous billing cycle
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,neutral,medium,Software crashes upon startup
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,account,neutral,low,Customer requests address change for recent order
+17,18,The promo code I received isn't working.,billing,negative,medium,True,billing,negative,low,Promo code not working
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,account,neutral,low,Customer requests to pause their membership for a month.
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,User locked out of account urgently
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Customer reports a broken laptop screen requiring immediate assistance.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Customer needs to reset their forgotten account password.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,low,Customer received package two days after expected delivery time.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,medium,Customer reports being charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,medium,Customer requests cancellation of their subscription plan.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer expresses gratitude to the support team.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,low,Payment failed but funds were still debited from the customer's account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer is satisfied with timely delivery and product quality.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,low,User experiences a technical issue with the mobile app freezing during file upload.
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,medium,Customer wants to upgrade their subscription plan.
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,low,User experiencing a server error during checkout process.
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,subscription,neutral,medium,Customer wants to upgrade their subscription plan to premium.
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,low,Customer is highly satisfied with the quick resolution of their account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,negative,low,Customer has not received expected tracking updates for a week.
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Customer seeks access to last month's invoice.
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,negative,low,User experiences frequent crashes during software startup.
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,delivery,neutral,medium,Customer wants to update the shipping address for their recent order.
+17,18,The promo code I received isn't working.,billing,negative,medium,True,billing,negative,low,Customer reports that a promo code is not functioning.
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to pause their membership for a month.
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,User locked out of their account urgently for a meeting.
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Customer reports a broken laptop screen requiring immediate assistance.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Customer needs to reset their forgotten password.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Customer reports that their package arrived two days after expected delivery time.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,medium,Customer reports being charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,medium,Customer requests cancellation of their subscription plan.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer expresses gratitude towards the support team.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,medium,Payment failed but funds were deducted from the customer's account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer is satisfied with timely delivery and product quality.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,medium,User experiences a crash in the mobile app while uploading files.
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan.
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,User experiencing a critical 500 error during checkout process.
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan to premium.
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,low,Customer expresses gratitude for quick resolution of account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,negative,medium,Customer has not received expected tracking updates for a week.
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Customer seeks information about accessing last month's invoice.
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,negative,high,User experiences frequent crashes during software startup.
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,delivery,neutral,low,Customer requests to update their shipping address for an existing order.
+17,18,The promo code I received isn't working.,billing,negative,medium,True,technical,negative,medium,Customer reports that a promotional code is not functioning.
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to pause their membership for a month.
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,User is locked out of their account and requires immediate access.
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Customer reports a broken laptop screen requiring immediate assistance.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Customer needs to reset their forgotten password.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Customer reports that their package arrived two days after expected delivery time.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,medium,Customer reports being charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,medium,Customer requests cancellation of their subscription plan.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer expresses gratitude towards the support team.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,medium,Payment failed but funds were deducted from the customer's account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer is satisfied with timely delivery and product quality.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,medium,User experiences app freeze during file upload.
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan.
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,User experiencing a critical 500 error during checkout process.
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan from standard to premium.
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,low,Customer expresses gratitude for quick resolution of account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,negative,medium,Customer has not received expected tracking updates for a week.
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Customer seeks information about accessing last month's invoice.
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,negative,high,User experiences frequent crashes when starting the software.
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,delivery,neutral,low,Customer requests to update the shipping address for their recent order.
+17,18,The promo code I received isn't working.,billing,negative,medium,True,technical,negative,medium,Customer reports that a promo code is not functioning correctly.
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to pause their membership for a month.
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,User is locked out of their account and urgently needs access for an upcoming meeting.
+0,1,My laptop screen is broken and I need urgent help.,technical,negative,high,True,technical,negative,high,Customer reports a broken laptop screen requiring immediate assistance.
+1,2,I forgot my password and need to reset it.,account,neutral,medium,True,account,neutral,low,Customer needs to reset their forgotten password.
+2,3,My package arrived two days late.,delivery,negative,medium,True,delivery,negative,medium,Customer complains about their package arriving two days late.
+3,4,I was charged twice for the same order.,billing,negative,high,True,billing,negative,medium,Customer reports being charged twice for the same order.
+4,5,I want to cancel my subscription.,subscription,neutral,medium,True,subscription,neutral,medium,Customer requests cancellation of their subscription plan.
+5,6,"Your support team was very helpful, thank you!",account,positive,low,True,technical,positive,low,Customer expresses gratitude towards the support team.
+6,7,The payment failed but money was deducted from my account.,billing,negative,high,True,billing,negative,medium,Payment failed but funds were deducted from the customer's account.
+7,8,I received my order early and everything looks great.,delivery,positive,low,True,delivery,positive,low,Customer is satisfied with timely delivery and product quality.
+8,9,The mobile app freezes when I upload a file.,technical,negative,high,True,technical,negative,medium,User experiences a crash in the mobile app while uploading files.
+9,10,How can I upgrade my subscription plan?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan.
+10,11,The website is throwing a 500 error when I try to checkout.,technical,negative,high,True,technical,negative,high,User experiencing a core functionality issue due to a 500 error during checkout.
+11,12,How do I upgrade my current plan to premium?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to upgrade their subscription plan to premium.
+12,13,Thank you for fixing my account issues so quickly!,account,positive,low,True,account,positive,low,Customer expresses gratitude for quick resolution of account issues.
+13,14,I haven't received any tracking updates for a week.,delivery,negative,high,True,delivery,negative,medium,Customer has not received expected tracking updates for a week.
+14,15,Where can I find the invoice for last month?,billing,neutral,low,True,billing,neutral,low,Customer seeks information about accessing last month's invoice.
+15,16,My software keeps crashing upon startup.,technical,negative,high,True,technical,negative,high,User experiences frequent crashes when starting the software.
+16,17,I'd like to change the shipping address for my recent order.,delivery,neutral,medium,True,delivery,neutral,low,Customer requests to update their shipping address for an existing order.
+17,18,The promo code I received isn't working.,billing,negative,medium,True,technical,negative,medium,Customer reports that a promo code is not functioning properly.
+18,19,Can I pause my membership for a month?,subscription,neutral,low,True,subscription,neutral,low,Customer wants to pause their membership for a month.
+19,20,I'm locked out of my account and need it for a meeting now!,account,negative,high,True,account,negative,high,User is locked out of their account and urgently needs access.

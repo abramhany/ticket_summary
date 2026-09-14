@@ -1,4 +1,4 @@
-def base_prompt(role:str,task:str,user_input:str,constraints:list[str]|None =None):
+def base_prompt(role:str,task:str,constraints:list[str]|None =None,example:str|None=None):
 
    constraints_text = ''
 
@@ -12,11 +12,13 @@ def base_prompt(role:str,task:str,user_input:str,constraints:list[str]|None =Non
    task: 
    {task}
 
+   example:
+   {example}
+   
    Constraints: 
    {constraints_text}
 
-    input : 
-    {user_input}
+    
 """.strip()
 
    return prompt
