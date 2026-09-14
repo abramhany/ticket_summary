@@ -65,9 +65,9 @@ Edit `.env` and set the model and CSV paths. For example, on Windows:
 
 ```dotenv
 MODEL_NAME=Qwen/Qwen2.5-3B-Instruct
-DATA_FILE_NAME=D:/Programing/Depi/ticket_summary/ticket_summary/src/Data/tickets.csv
-OUTPUT_FILE_NAME=D:/Programing/Depi/ticket_summary/ticket_summary/src/Data/output.csv
-METRIC_FILE_NAME=D:/Programing/Depi/ticket_summary/ticket_summary/src/Data/metric.csv
+DATA_FILE_NAME=abslute location/tickets.csv
+OUTPUT_FILE_NAME=absolute location/output.csv
+METRIC_FILE_NAME=absolute location/metric.csv
 ```
 
 The paths may also be absolute paths using backslashes, but forward slashes avoid
